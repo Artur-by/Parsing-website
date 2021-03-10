@@ -1,16 +1,26 @@
-# This is a sample Python script.
+import requests
+from lxml import html
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+url = 'https://www.21vek.by/bathtubs/'
+response = requests.get(url=url)
 
+xpath = '//*[@id="5904035"]/div/span[3]/span[1]'
+tree = html.fromstring(response.text)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+for index in range(1, 15):
+    xpath_1 = f'//*[@id="j-result-page-1"]/li[{index}]/dl/div[2]/span[1]/span[2]'
+    element = tree.xpath(xpath_1)
+    text = element[0].text
+    if text == 'р.':
+        xpath_2 = f'//*[@id="j-result-page-1"]/li[{index}]/dl/div[2]/span[1]/span[1]'
+        element = tree.xpath(xpath_2)
+        text = element[0].text
+    print(text)
 
+xpath = "//li/dl[1]/div[@class='catalog-result__item_data' and 1]/dt[@class='result__root' and 1]/a[@class='result__link j-ga_track' and 1]/span[@class='result__name' and 2]"
+element = tree.xpath(xpath)
+a = []
+for e in element:
+    a.append(e.text)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(a)
