@@ -10,44 +10,13 @@ response.encoding = 'cp1251'
 tree = html.fromstring(response.text)
 
 
-path_name = "//a/span[1]/b[1]"
-path_fullname = "//a/span[1]/strong[1]"
-path_code = "//div/sup[1]"
-path_price ="//div[@class='price']/div[1]"
+path = ["//div/sup[1]", "//a/span[1]/b[1]", "//a/span[1]/strong[1]", "//div[@class='price']/div[1]"]
+# в списке path указаны патчи требуемых позиций
 
-
-
-el_name = tree.xpath(path_name)
-print(len(el_name))
-a_name = []
-for i in el_name:
-    a_name.append(i.text)
-print(a_name)
-
-el_fullname = tree.xpath(path_fullname)
-print(len(el_fullname))
-a_fullname = []
-for i in el_fullname:
-    a_fullname.append(i.text)
-print(a_fullname)
-
-el_code = tree.xpath(path_code)
-print(len(el_code))
-a_code = []
-for i in el_code:
-    a_code.append(i.text)
-print(a_code)
-
-el_price = tree.xpath(path_price)
-print(len(el_price))
-a_price = []
-for i in el_price:
-    a_price.append(i.text)
-print(a_price)
-
-'''for index in range(1, 5):
-    path_price = "//div[@class='price']/div[1]"
-    element = tree.xpath(path_price)
-    text = element[0].text
-    print(text)'''
-
+for e in path:                  # цикл по перебору патчей
+    element = tree.xpath(e)
+    q=[]
+    for i in element:
+        #print(i.text)          можно распечатать в столбец элементы
+        q.append(i.text)
+    print(q)
