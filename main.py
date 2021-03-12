@@ -1,17 +1,71 @@
 # Файл по организации меню для выбора парсинга сайта, категорий, товаров
+import Parsing_web
 
 print(" Данная программа позволяет считать  и сохранить данный с заданного сайта ")
-inp_site = input(" Выберите сайт: 1 - sila.by, 2 - 21vek.by ")
-inp_cat = input(" Выберите категорию товаров:\n"
-                " 1- Смартфоны, ноутбуки, компьютеры \n"
-                " 2- Телевизоры, аудио, фото \n"
-                " 3- Бытовая техника \n"
-                " 4- Встраиваемая техника \n"
-                " 5- Посуда и аксессуары \n"
-                " 6- Дом, сад, ремонт авто ")
+
+while True:
+    inp_site = input(" Выберите сайт: 1 - sila.by, 2 - 21vek.by ")
+
+
+    if inp_site == '1':
+        inp_cat = input(" Выберите категорию товаров:\n"
+                        " 1- Смартфоны, ноутбуки, компьютеры \n"
+                        " 2- Телевизоры, аудио, фото \n"
+                        " 3- Бытовая техника \n"
+                        " 4- Встраиваемая техника \n"
+                        " 5- Посуда и аксессуары \n"
+                        " 6- Дом, сад, ремонт авто ")
+        if inp_cat == '1':
+            Parsing_web.start_parsing('ntkp_url.txt')
+            inp = input("Продолжить парсинг?  Да - любая клавиша , 1-Выход ")
+            if inp == '1':
+                break
+            else:
+                continue
+        elif inp_cat == '2':
+            Parsing_web.start_parsing('av_url.txt')
+            inp = input("Продолжить парсинг?  Да - любая клавиша , 1-Выход ")
+            if inp == '1':
+                break
+            else:
+                continue
+        elif inp_cat == '3':
+            Parsing_web.start_parsing('bt_url.txt')
+            inp = input("Продолжить парсинг?  Да - любая клавиша , 1-Выход ")
+            if inp == '1':
+                break
+            else:
+                continue
+        elif inp_cat == '4':
+            Parsing_web.start_parsing('vt_url.txt')
+            inp = input("Продолжить парсинг?  Да - любая клавиша , 1-Выход ")
+            if inp == '1':
+                break
+            else:
+                continue
+        elif inp_cat == '5':
+            Parsing_web.start_parsing('pa_url.txt')
+            inp = input("Продолжить парсинг?  Да - любая клавиша , 1-Выход ")
+            if inp == '1':
+                break
+            else:
+                continue
+        elif inp_cat == '6':
+            Parsing_web.start_parsing('dsra_url.txt')
+            inp = input("Продолжить парсинг?  Да - любая клавиша , 1-Выход ")
+            if inp == '1':
+                break
+            else:
+                continue
+
+    elif inp_site == '2':
+        print('В разработке!')
+    else:
+        break
+
 
 # библиотека ссылок для категории Смартфоны, ноутбуки, компьютеры
-ntpk_aksessuary_apple = 'https://sila.by/ntpk/aksessuary_apple'
+'''ntpk_aksessuary_apple = 'https://sila.by/ntpk/aksessuary_apple'
 page_aksessuary_apple = 1
 ntpk_aksessuary_mobile = 'https://sila.by/ntpk/aksessuary_mobile'
 page_aksessuary_mobile = 6
@@ -88,6 +142,6 @@ page_chehly = 16
 ntpk_chistyashhie_sredstva = 'https://sila.by/ntpk/chistyashhie_sredstva'
 page_chistyashhie_sredstva = 1
 ntpk_elektronnye_knigi = 'https://sila.by/ntpk/elektronnye_knigi'
-page_elektronnye_knigi = 2
+page_elektronnye_knigi = 2'''
 
 

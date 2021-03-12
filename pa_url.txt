@@ -1,0 +1,15 @@
+https://sila.by/pa/chistyashchie_sredstva, 10;
+https://sila.by/pa/kastryuli, 3;
+https://sila.by/pa/kovshi, 1;
+https://sila.by/pa/kryshki, 2;
+https://sila.by/pa/kuhonnaya_utvar, 11;
+https://sila.by/pa/kuhonnye_aksessuary, 5;
+https://sila.by/pa/kuhonnye_nozhi_i_nozhnicy, 4;
+https://sila.by/pa/posuda, 1;
+https://sila.by/pa/pezozazhigalki, 1;
+https://sila.by/pa/skovorody, 9;
+https://sila.by/pa/sotejniki, 1;
+https://sila.by/pa/turky, 1;
+https://sila.by/pa/filtry_dlja_ochistki_vody, 3;
+https://sila.by/pa/formy_dlya_vypechki, 2;
+https://sila.by/pa/chajniki, 1;

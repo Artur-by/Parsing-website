@@ -1,0 +1,11 @@
+https://sila.by/vt/varochnie_paneli, 34;
+https://sila.by/vt/vytyazhki, 57;
+https://sila.by/vt/poverhnosti_gazovye, 20;
+https://sila.by/vt/duhovye_shkafy, 28;
+https://sila.by/vt/kofemashiny, 1;
+https://sila.by/vt/mikrovolnovie_pechi, 4;
+https://sila.by/vt/morozilniki_vstroika, 1;
+https://sila.by/vt/posudomoechnie_mashiny, 6;
+https://sila.by/vt/stiralnie_mashiny, 1;
+https://sila.by/vt/xolodilniki, 4;
+https://sila.by/vt/poverhnosti_elektricheskie, 15;

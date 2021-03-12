@@ -35,7 +35,6 @@ def parsing(urllink, pagelink):                # функция парсинга
         a_tipe = []
         for i in el_tipe:
             a_tipe.append(i.text)
-        #print(a_tipe)
 
         el_name = tree.xpath(path_name)     # парсим название устройств
         a_name = []
@@ -63,17 +62,15 @@ def parsing(urllink, pagelink):                # функция парсинга
 
         for i in item:                      # новый список разбиваем построчно и записываем в файл
             print(i)
-            append_file('mobil.txt', i)
+            append_file('sila.txt', i)
 
 
-
-spis = readlines_file('ntkp_url.txt')   # перебираем адреса из файла со списком url и передаем в функцию парсинга
-for i in spis:
-    spisOne = i.split(';\n')
-    for j in spisOne:
-        spisToo = j.split(',')
-        if j !='':
-            parsing(spisToo[1], int(spisToo[2]))    # парсим каждую группу товаров
-
-
+def start_parsing(file_url):
+    spis = readlines_file(file_url)   # перебираем адреса из файла со списком url и передаем в функцию парсинга
+    for i in spis:
+        spisOne = i.split(';\n')
+        for j in spisOne:
+            spisToo = j.split(',')
+            if j !='':
+                parsing(spisToo[0], int(spisToo[1]))    # парсим каждую группу товаров
 
