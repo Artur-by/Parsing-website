@@ -89,3 +89,5 @@ ntpk_chistyashhie_sredstva = 'https://sila.by/ntpk/chistyashhie_sredstva'
 page_chistyashhie_sredstva = 1
 ntpk_elektronnye_knigi = 'https://sila.by/ntpk/elektronnye_knigi'
 page_elektronnye_knigi = 2
+
+
